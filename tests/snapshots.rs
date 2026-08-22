@@ -3,7 +3,7 @@ use ratatui::buffer::Buffer;
 use ratatui::layout::Rect;
 use ratatui::widgets::Widget;
 
-use tui_breadcrumbs::{Breadcrumb, BreadcrumbSeparator, TruncateStrategy};
+use tui_breadcrumb::{Breadcrumb, BreadcrumbSeparator, TruncateStrategy};
 
 fn render_to_string(widget: Breadcrumb, width: u16) -> String {
     let area = Rect::new(0, 0, width, 1);

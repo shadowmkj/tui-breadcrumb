@@ -1,9 +1,9 @@
-//! Minimal Quickstart Example for `tui-breadcrumbs`
+//! Minimal Quickstart Example for `tui-breadcrumb`
 
 use ratatui::prelude::*;
 use ratatui::widgets::{Block, Borders, Paragraph};
 use std::error::Error;
-use tui_breadcrumbs::{Breadcrumb, BreadcrumbSeparator};
+use tui_breadcrumb::{Breadcrumb, BreadcrumbSeparator};
 
 fn main() -> Result<(), Box<dyn Error>> {
     let mut terminal = ratatui::init();

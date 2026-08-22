@@ -1,4 +1,4 @@
-//! Custom Styling & Themes Gallery for `tui-breadcrumbs`
+//! Custom Styling & Themes Gallery for `tui-breadcrumb`
 //!
 //! Demonstrates advanced styling capabilities, custom Unicode / Powerline glyphs,
 //! per-item span formatting, and unique separator presets.
@@ -10,7 +10,7 @@ use ratatui::crossterm::event::{self, Event, KeyCode, KeyEventKind};
 use ratatui::prelude::*;
 use ratatui::widgets::{Block, Borders, Paragraph};
 
-use tui_breadcrumbs::{Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, TruncateStrategy};
+use tui_breadcrumb::{Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, TruncateStrategy};
 
 fn main() -> Result<(), Box<dyn Error>> {
     let mut terminal = ratatui::init();
@@ -34,7 +34,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             // Header
             let header = Paragraph::new(Line::from(vec![
                 Span::styled(
-                    " 🎨 tui-breadcrumbs ",
+                    " 🎨 tui-breadcrumb ",
                     Style::default().fg(Color::Black).bg(Color::Cyan).bold(),
                 ),
                 Span::raw(" — Custom Themes & Advanced Styling Gallery"),

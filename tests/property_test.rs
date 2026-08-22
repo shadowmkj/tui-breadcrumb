@@ -3,7 +3,7 @@ use ratatui::buffer::Buffer;
 use ratatui::layout::Rect;
 use ratatui::widgets::Widget;
 
-use tui_breadcrumbs::{Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, TruncateStrategy};
+use tui_breadcrumb::{Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, TruncateStrategy};
 
 #[quickcheck]
 fn prop_layout_never_overflows_width(

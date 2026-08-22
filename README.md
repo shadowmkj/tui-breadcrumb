@@ -1,15 +1,15 @@
 <div align="center">
 
-# 🍞 `tui-breadcrumbs`
+# 🍞 `tui-breadcrumb`
 
 **A customizable, responsive, and interactive hierarchical navigation trail widget for [Ratatui](https://crates.io/crates/ratatui).**
 
-[![Crates.io](https://img.shields.io/crates/v/tui-breadcrumbs.svg?style=flat-square)](https://crates.io/crates/tui-breadcrumbs)
-[![Documentation](https://docs.rs/tui-breadcrumbs/badge.svg?style=flat-square)](https://docs.rs/tui-breadcrumbs)
-[![Downloads](https://img.shields.io/crates/d/tui-breadcrumbs.svg?style=flat-square)](https://crates.io/crates/tui-breadcrumbs)
-[![CI](https://img.shields.io/github/actions/workflow/status/shadowmkj/tui-breadcrumbs/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/shadowmkj/tui-breadcrumbs/actions/workflows/ci.yml)
-[![Codecov](https://img.shields.io/codecov/c/gh/shadowmkj/tui-breadcrumbs?style=flat-square&logo=codecov)](https://codecov.io/gh/shadowmkj/tui-breadcrumbs)
-[![Release](https://img.shields.io/github/v/release/shadowmkj/tui-breadcrumbs?style=flat-square&include_prereleases)](https://github.com/shadowmkj/tui-breadcrumbs/releases)
+[![Crates.io](https://img.shields.io/crates/v/tui-breadcrumb.svg?style=flat-square)](https://crates.io/crates/tui-breadcrumb)
+[![Documentation](https://docs.rs/tui-breadcrumb/badge.svg?style=flat-square)](https://docs.rs/tui-breadcrumb)
+[![Downloads](https://img.shields.io/crates/d/tui-breadcrumb.svg?style=flat-square)](https://crates.io/crates/tui-breadcrumb)
+[![CI](https://img.shields.io/github/actions/workflow/status/shadowmkj/tui-breadcrumb/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/shadowmkj/tui-breadcrumb/actions/workflows/ci.yml)
+[![Codecov](https://img.shields.io/codecov/c/gh/shadowmkj/tui-breadcrumb?style=flat-square&logo=codecov)](https://codecov.io/gh/shadowmkj/tui-breadcrumb)
+[![Release](https://img.shields.io/github/v/release/shadowmkj/tui-breadcrumb?style=flat-square&include_prereleases)](https://github.com/shadowmkj/tui-breadcrumb/releases)
 [![License](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue.svg?style=flat-square)](LICENSE)
 [![Ratatui](https://img.shields.io/badge/ratatui-v0.30+-purple.svg?style=flat-square)](https://crates.io/crates/ratatui)
 
@@ -30,7 +30,7 @@
 
 Terminal user interfaces—such as file managers, cloud resource consoles, database browsers, and nested configuration screens—frequently require breadcrumb navigation paths. Without a dedicated widget, developers often manually assemble `Line` and `Span` collections and write custom string truncations that break on Unicode characters or fail to support mouse interaction.
 
-`tui-breadcrumbs` solves this by providing:
+`tui-breadcrumb` solves this by providing:
 - **Built-in Separator Presets**: Slash (`/`), Chevron (`❯`), Angle (`›`), Arrow (`→`), Pipe (`|`), Backslash (`\\`), Double Angle (`»`), or custom glyphs.
 - **Smart Responsive Truncation**: Intelligently fits breadcrumbs to any terminal column width using strategies like `Middle`, `Start`, `ShortenNames`, `End`, or `None`.
 - **Full Interactivity (`BreadcrumbState`)**: Keyboard focus navigation (`Left`/`Right` arrows) and pixel-accurate mouse hit testing for segment clicks and ancestor dropdown triggers (`▾`).
@@ -41,17 +41,17 @@ Terminal user interfaces—such as file managers, cloud resource consoles, datab
 
 ## 📦 Installation
 
-Add `tui-breadcrumbs` to your `Cargo.toml`:
+Add `tui-breadcrumb` to your `Cargo.toml`:
 
 ```bash
-cargo add tui-breadcrumbs
+cargo add tui-breadcrumb
 ```
 
 Or manually:
 
 ```toml
 [dependencies]
-tui-breadcrumbs = "0.1.0"
+tui-breadcrumb = "0.1.0"
 ratatui = "0.30"
 ```
 
@@ -63,7 +63,7 @@ ratatui = "0.30"
 
 ```rust
 use ratatui::prelude::*;
-use tui_breadcrumbs::{Breadcrumb, BreadcrumbSeparator, TruncateStrategy};
+use tui_breadcrumb::{Breadcrumb, BreadcrumbSeparator, TruncateStrategy};
 
 fn render_trail(frame: &mut Frame, area: Rect) {
     let widget = Breadcrumb::new(["Home", "Projects", "ratatui", "src", "sparkline.rs"])
@@ -81,7 +81,7 @@ fn render_trail(frame: &mut Frame, area: Rect) {
 ```rust
 use ratatui::prelude::*;
 use ratatui::crossterm::event::{Event, KeyCode, MouseEventKind, MouseButton};
-use tui_breadcrumbs::{Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, BreadcrumbState, TruncateStrategy};
+use tui_breadcrumb::{Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, BreadcrumbState, TruncateStrategy};
 
 struct App {
     state: BreadcrumbState,
@@ -148,7 +148,7 @@ When a breadcrumb trail exceeds available terminal width, [`TruncateStrategy`] d
 | Strategy | Output Pattern | Description |
 |---|---|---|
 | **`Middle`** *(Default)* | `Home ❯ ... ❯ src ❯ sparkline.rs` | Preserves root context and active leaf; collapses intermediate segments into `...`. |
-| **`Start`** | `... ❯ tui-breadcrumbs ❯ src ❯ sparkline.rs` | Preserves deepest active leaf and immediate parents; collapses leftmost ancestors. |
+| **`Start`** | `... ❯ tui-breadcrumb ❯ src ❯ sparkline.rs` | Preserves deepest active leaf and immediate parents; collapses leftmost ancestors. |
 | **`ShortenNames`** | `H ❯ P ❯ ratatui ❯ src ❯ sparkline.rs` | Progressively abbreviates ancestor segment labels to single characters before collapsing. |
 | **`End`** | `Home ❯ Projects ❯ ratatui ❯ ...` | Left-to-right priority; preserves root ancestors and collapses leaf segments. |
 | **`None`** | `Home ❯ Projects ❯ ratatui ❯ src` | Strict clipping at the boundary without ellipsis substitution. |
@@ -192,7 +192,7 @@ Easily initialize a breadcrumb navigation trail directly from a [`std::path::Pat
 
 ```rust
 use std::path::Path;
-use tui_breadcrumbs::Breadcrumb;
+use tui_breadcrumb::Breadcrumb;
 
 let path = Path::new("/var/log/nginx/access.log");
 let widget = Breadcrumb::from_path(path);
@@ -226,7 +226,7 @@ The [`examples/`](examples/) directory includes multiple practical applications 
 
 ## 🧪 Testing & Verification
 
-`tui-breadcrumbs` includes a comprehensive verification suite:
+`tui-breadcrumb` includes a comprehensive verification suite:
 
 ```bash
 # Run unit tests

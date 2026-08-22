@@ -1,4 +1,4 @@
-//! Dropdown Popover Menus Example for `tui-breadcrumbs`
+//! Dropdown Popover Menus Example for `tui-breadcrumb`
 //!
 //! Demonstrates:
 //! - Ancestor dropdown indicators (`▾`) on deep hierarchical resource paths.
@@ -16,7 +16,7 @@ use ratatui::crossterm::execute;
 use ratatui::prelude::*;
 use ratatui::widgets::{Block, Borders, Clear, List, ListItem, ListState, Paragraph};
 
-use tui_breadcrumbs::{
+use tui_breadcrumb::{
     Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, BreadcrumbState, TruncateStrategy,
 };
 

@@ -31,7 +31,7 @@ use unicode_width::UnicodeWidthStr;
 /// # Examples
 ///
 /// ```rust
-/// use tui_breadcrumbs::BreadcrumbSeparator;
+/// use tui_breadcrumb::BreadcrumbSeparator;
 /// use ratatui::style::{Color, Style};
 ///
 /// // Standard chevron with custom cyan style

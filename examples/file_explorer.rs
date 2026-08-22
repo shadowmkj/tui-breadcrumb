@@ -1,4 +1,4 @@
-//! Interactive File Explorer Example for `tui-breadcrumbs`
+//! Interactive File Explorer Example for `tui-breadcrumb`
 //!
 //! Demonstrates:
 //! - Real-time integration of `Breadcrumb::from_path(std::path::Path)`.
@@ -18,7 +18,7 @@ use ratatui::crossterm::execute;
 use ratatui::prelude::*;
 use ratatui::widgets::{Block, Borders, List, ListItem, ListState, Paragraph};
 
-use tui_breadcrumbs::{Breadcrumb, BreadcrumbSeparator, BreadcrumbState, TruncateStrategy};
+use tui_breadcrumb::{Breadcrumb, BreadcrumbSeparator, BreadcrumbState, TruncateStrategy};
 
 struct DirectoryEntry {
     name: String,
@@ -106,7 +106,7 @@ impl App {
     }
 
     fn jump_to_ancestor_index(&mut self, item_index: usize) {
-        let items = tui_breadcrumbs::from_path(&self.current_dir);
+        let items = tui_breadcrumb::from_path(&self.current_dir);
         if item_index < items.len() {
             // Reconstruct path up to item_index
             let mut target = PathBuf::new();

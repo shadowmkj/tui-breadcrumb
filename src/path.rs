@@ -16,7 +16,7 @@ use std::path::{Component, Path};
 ///
 /// ```rust
 /// use std::path::Path;
-/// use tui_breadcrumbs::from_path;
+/// use tui_breadcrumb::from_path;
 ///
 /// let path = Path::new("/var/log/nginx/access.log");
 /// let items = from_path(path);

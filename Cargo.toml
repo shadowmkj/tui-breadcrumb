@@ -1,9 +1,9 @@
 [package]
-name = "tui-breadcrumbs"
+name = "tui-breadcrumb"
 version = "0.1.0"
 edition = "2024"
 authors = ["shadowmkj"]
-description = "A customizable and interactive hierarchical breadcrumb navigation widget for Ratatui"
+description = "A customizable, interactive hierarchical breadcrumb navigation widget for Ratatui."
 readme = "README.md"
 license = "MIT OR Apache-2.0"
 keywords = ["ratatui", "tui", "widget", "breadcrumbs", "navigation"]

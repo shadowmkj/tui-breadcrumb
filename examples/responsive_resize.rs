@@ -1,4 +1,4 @@
-//! Responsive Truncation Lab Example for `tui-breadcrumbs`
+//! Responsive Truncation Lab Example for `tui-breadcrumb`
 //!
 //! Demonstrates:
 //! - Interactive exploration and side-by-side comparison of all 5 truncation strategies.
@@ -12,7 +12,7 @@ use ratatui::crossterm::event::{self, Event, KeyCode, KeyEventKind};
 use ratatui::prelude::*;
 use ratatui::widgets::{Block, Borders, Paragraph};
 
-use tui_breadcrumbs::{Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, TruncateStrategy};
+use tui_breadcrumb::{Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, TruncateStrategy};
 
 struct App {
     width: u16,

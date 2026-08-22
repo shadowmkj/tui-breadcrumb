@@ -18,7 +18,7 @@ use ratatui::layout::Rect;
 /// # Examples
 ///
 /// ```rust
-/// use tui_breadcrumbs::BreadcrumbState;
+/// use tui_breadcrumb::BreadcrumbState;
 ///
 /// let mut state = BreadcrumbState::default();
 /// state.select(Some(2));

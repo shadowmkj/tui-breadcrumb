@@ -31,7 +31,7 @@ use crate::truncate::{RenderElement, resolve_layout};
 /// # Examples
 ///
 /// ```rust
-/// use tui_breadcrumbs::{Breadcrumb, BreadcrumbSeparator, TruncateStrategy};
+/// use tui_breadcrumb::{Breadcrumb, BreadcrumbSeparator, TruncateStrategy};
 /// use ratatui::style::{Color, Style};
 ///
 /// // Stateless widget

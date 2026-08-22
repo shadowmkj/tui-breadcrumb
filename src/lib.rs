@@ -1,4 +1,4 @@
-//! # tui-breadcrumbs
+//! # tui-breadcrumb
 //!
 //! A dedicated, highly customizable, and interactive hierarchical breadcrumb navigation
 //! widget for [Ratatui](https://crates.io/crates/ratatui).
@@ -24,7 +24,7 @@
 //!
 //! ```rust
 //! use ratatui::prelude::*;
-//! use tui_breadcrumbs::{Breadcrumb, BreadcrumbSeparator, BreadcrumbState, TruncateStrategy};
+//! use tui_breadcrumb::{Breadcrumb, BreadcrumbSeparator, BreadcrumbState, TruncateStrategy};
 //!
 //! fn draw_breadcrumbs(frame: &mut Frame, area: Rect, state: &mut BreadcrumbState) {
 //!     let widget = Breadcrumb::new(["Home", "Projects", "ratatui", "src", "sparkline.rs"])

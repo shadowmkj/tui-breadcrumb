@@ -1,8 +1,8 @@
 // ==============================================================================
-// tui-breadcrumbs Interactive Demo
+// tui-breadcrumb Interactive Demo
 // ==============================================================================
 
-//! Interactive demonstration for `tui-breadcrumbs`.
+//! Interactive demonstration for `tui-breadcrumb`.
 //!
 //! Features:
 //! - Real-time responsive width resizing to visualize truncation strategies.
@@ -24,7 +24,7 @@ use ratatui::crossterm::terminal::{
 use ratatui::prelude::*;
 use ratatui::widgets::{Block, Borders, Clear, Paragraph};
 
-use tui_breadcrumbs::{
+use tui_breadcrumb::{
     Breadcrumb, BreadcrumbItem, BreadcrumbSeparator, BreadcrumbState, TruncateStrategy,
 };
 
@@ -44,7 +44,7 @@ impl App {
             BreadcrumbItem::new("Home").style(Style::default().fg(Color::Cyan)),
             BreadcrumbItem::with_dropdown("Projects").style(Style::default().fg(Color::Blue)),
             BreadcrumbItem::with_dropdown("ratatui").style(Style::default().fg(Color::Green)),
-            BreadcrumbItem::new("tui-breadcrumbs").style(Style::default().fg(Color::Magenta)),
+            BreadcrumbItem::new("tui-breadcrumb").style(Style::default().fg(Color::Magenta)),
             BreadcrumbItem::with_dropdown("src").style(Style::default().fg(Color::Yellow)),
             BreadcrumbItem::new("sparkline.rs").style(Style::default().fg(Color::White)),
         ];
@@ -287,7 +287,7 @@ fn ui(frame: &mut Frame, app: &mut App) {
     // 1. Header
     let title = Paragraph::new(Line::from(vec![
         Span::styled(
-            " 🍞 tui-breadcrumbs ",
+            " 🍞 tui-breadcrumb ",
             Style::default().fg(Color::Black).bg(Color::Yellow).bold(),
         ),
         Span::raw(" — Hierarchical Navigation Trail Widget for Ratatui"),

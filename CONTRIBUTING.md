@@ -1,6 +1,6 @@
-# Contributing to `tui-breadcrumbs`
+# Contributing to `tui-breadcrumb`
 
-Thank you for your interest in contributing to `tui-breadcrumbs`! Whether you are reporting a bug, proposing a new feature, improving documentation, or submitting code changes, your contributions are warmly welcome.
+Thank you for your interest in contributing to `tui-breadcrumb`! Whether you are reporting a bug, proposing a new feature, improving documentation, or submitting code changes, your contributions are warmly welcome.
 
 ---
 
@@ -16,8 +16,8 @@ Thank you for your interest in contributing to `tui-breadcrumbs`! Whether you ar
 ### Getting Started
 1. **Fork and Clone** the repository:
    ```bash
-   git clone https://github.com/shadowmkj/tui-breadcrumbs.git
-   cd tui-breadcrumbs
+   git clone https://github.com/shadowmkj/tui-breadcrumb.git
+   cd tui-breadcrumb
    ```
 2. **Build the project**:
    ```bash
@@ -71,7 +71,7 @@ RUSTDOCFLAGS="-D warnings" cargo doc --no-deps --all-features
 
 ## 📐 Code Style & Architecture Guidelines
 
-When contributing code to `tui-breadcrumbs`, please adhere to the following principles:
+When contributing code to `tui-breadcrumb`, please adhere to the following principles:
 
 1. **Rust API Guidelines**:
    - Follow standard Rust API guidelines (<https://rust-lang.github.io/api-guidelines/>).

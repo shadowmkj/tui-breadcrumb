@@ -21,7 +21,7 @@ use unicode_width::UnicodeWidthStr;
 /// # Examples
 ///
 /// ```rust
-/// use tui_breadcrumbs::BreadcrumbItem;
+/// use tui_breadcrumb::BreadcrumbItem;
 /// use ratatui::style::{Color, Style};
 ///
 /// // Create from simple string slice
