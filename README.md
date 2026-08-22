@@ -208,6 +208,7 @@ The [`examples/`](examples/) directory includes multiple practical applications 
 |---|---|---|
 | **Interactive Demo** | `cargo run --example demo` | Full-featured demo with keyboard navigation, strategy switching, and mouse clicks. |
 | **Minimal Quickstart** | `cargo run --example simple` | Minimal zero-config ~25 line getting started example. |
+| **File Explorer** | `cargo run --example file_explorer` | Two-pane directory browser with live `from_path` updates and click-to-jump. |
 | **Custom Styling Gallery** | `cargo run --example custom_styling` | Side-by-side gallery of Powerline pills, CI badges, Retro amber/green, and Minimal dots. |
 | **Dropdown Popovers** | `cargo run --example dropdown_menus` | Deep resource hierarchy with floating sibling branch selection modals. |
 | **Responsive Truncation Lab** | `cargo run --example responsive_resize` | Interactive width caliper and live comparator across all 5 truncation strategies. |
@@ -216,6 +217,7 @@ The [`examples/`](examples/) directory includes multiple practical applications 
 
 - **Interactive Showcase (`demo.rs`)**: Navigate crumbs with `←`/`→`/`h`/`l`, cycle separators with `Tab`, toggle strategies with `1`–`5`, and click `▾` dropdown triggers.
 - **Minimal Quickstart (`simple.rs`)**: Minimal template for quick integration into existing projects.
+- **Filesystem Navigation (`file_explorer.rs`)**: Browse directories with `Enter`/`Backspace`, or click any parent breadcrumb segment to jump immediately to that directory.
 - **Theming & Powerline Gallery (`custom_styling.rs`)**: Inspect 4 visual themes: Powerline pill styling (``), CI/CD status badges (`[✔ Build] ❯ [⚡ Tests]`), Retro green phosphor (`//`), and Minimal dots (`•`).
 - **Deep Hierarchies & Dropdowns (`dropdown_menus.rs`)**: Click `▾` on any resource level to open a floating modal of alternate sibling branches.
 - **Truncation & Width Caliper (`responsive_resize.rs`)**: Adjust container width in real time (`[`/`]` or arrow keys) to observe and compare all 5 truncation strategies on emoji-rich paths.
