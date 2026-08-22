@@ -200,22 +200,15 @@ let widget = Breadcrumb::from_path(path);
 
 ---
 
-## 🎮 Interactive Demo
+## 🎮 Examples & Demos
 
-An interactive demonstration is included in `examples/demo.rs`. It showcases live responsive resizing, keyboard navigation, separator switching, strategy comparisons, and mouse dropdown triggers:
+The [`examples/`](examples/) directory includes multiple practical applications showcasing different integration patterns:
 
-```bash
-cargo run --example demo
-```
-
-### Controls in Demo:
-- **`←` / `→` / `h` / `l`**: Move selection through path segments.
-- **`Home` / `End`**: Jump to root / leaf segment.
-- **`Tab`**: Cycle through separator presets.
-- **`1` – `5`**: Switch truncation strategies (`Middle`, `Start`, `ShortenNames`, `End`, `None`).
-- **`+` / `-`**: Resize container width to observe responsive truncation in real time.
-- **Mouse Click**: Click any crumb segment to focus, or click `▾` dropdown triggers to open sub-menus.
-- **`q` / `Esc`**: Exit demo.
+| Example | Command | Description |
+|---|---|---|
+| **Interactive Demo** | `cargo run --example demo` | Full-featured demo with keyboard navigation, strategy switching, and mouse clicks. |
+| **Minimal Quickstart** | `cargo run --example simple` | Minimal zero-config ~25 line getting started example. |
+| **Custom Styling Gallery** | `cargo run --example custom_styling` | Side-by-side gallery of Powerline pills, CI badges, Retro amber/green, and Minimal dots. |
 
 ---
 
