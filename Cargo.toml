@@ -11,7 +11,7 @@ repository = "https://github.com/shadowmkj/tui-breadcrumb"
 homepage = "https://github.com/shadowmkj/tui-breadcrumb"
 documentation = "https://docs.rs/tui-breadcrumb"
 keywords = ["ratatui", "tui", "widget", "breadcrumb", "navigation"]
-categories = ["command-line-interface", "gui"]
+categories = ["command-line-interface", "tui", "terminal-user-interface", "ratatui"]
 include = [
     "src/**/*",
     "examples/**/*",

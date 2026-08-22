@@ -56,7 +56,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 ])
                 .split(area);
 
-            // 1. Header
+            // Header
             let header = Paragraph::new(Line::from(vec![
                 Span::styled(
                     " 🔬 Truncation Lab ",
@@ -67,7 +67,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             .block(Block::default().borders(Borders::ALL));
             frame.render_widget(header, chunks[0]);
 
-            // 2. Caliper Ruler
+            // Caliper Ruler
             let max_w = app.width.min(area.width.saturating_sub(4));
             let mut ruler = String::new();
             for i in 1..=max_w {
@@ -99,7 +99,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
             let render_rect = Rect::new(chunks[2].x + 1, 0, max_w, 3);
 
-            // 3. Strategy 1: Middle
+            // Strategy: Middle
             let middle_w = Breadcrumb::new(app.items.clone())
                 .separator(BreadcrumbSeparator::chevron())
                 .strategy(TruncateStrategy::middle())
@@ -114,7 +114,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             r1.y = chunks[2].y;
             frame.render_widget(middle_w, r1);
 
-            // 4. Strategy 2: Start
+            // Strategy: Start
             let start_w = Breadcrumb::new(app.items.clone())
                 .separator(BreadcrumbSeparator::chevron())
                 .strategy(TruncateStrategy::start())
@@ -129,7 +129,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             r2.y = chunks[3].y;
             frame.render_widget(start_w, r2);
 
-            // 5. Strategy 3: ShortenNames
+            // Strategy: ShortenNames
             let shorten_w = Breadcrumb::new(app.items.clone())
                 .separator(BreadcrumbSeparator::chevron())
                 .strategy(TruncateStrategy::shorten_names())
@@ -144,7 +144,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             r3.y = chunks[4].y;
             frame.render_widget(shorten_w, r3);
 
-            // 6. Strategy 4: End
+            // Strategy: End
             let end_w = Breadcrumb::new(app.items.clone())
                 .separator(BreadcrumbSeparator::chevron())
                 .strategy(TruncateStrategy::end())
@@ -159,7 +159,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             r4.y = chunks[5].y;
             frame.render_widget(end_w, r4);
 
-            // 7. Strategy 5: None
+            // Strategy: None
             let none_w = Breadcrumb::new(app.items.clone())
                 .separator(BreadcrumbSeparator::chevron())
                 .strategy(TruncateStrategy::none())

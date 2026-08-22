@@ -144,7 +144,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 ])
                 .split(area);
 
-            // 1. Top Bar: Path Breadcrumbs
+            // Top Bar: Path Breadcrumbs
             let breadcrumbs = Breadcrumb::from_path(&app.current_dir)
                 .separator(BreadcrumbSeparator::slash())
                 .strategy(TruncateStrategy::middle())
@@ -159,7 +159,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
             frame.render_stateful_widget(breadcrumbs, chunks[0], &mut app.breadcrumb_state);
 
-            // 2. Directory Contents List
+            // Directory Contents List
             let list_items: Vec<ListItem> = app
                 .entries
                 .iter()
@@ -190,7 +190,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
             frame.render_stateful_widget(list_widget, chunks[1], &mut app.list_state);
 
-            // 3. Footer
+            // Footer
             let footer = Paragraph::new(vec![
                 Line::from(vec![
                     Span::styled(" [Enter] ", Style::default().bold().fg(Color::Yellow)),

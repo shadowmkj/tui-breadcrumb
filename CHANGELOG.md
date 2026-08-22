@@ -15,7 +15,7 @@
 - *(deps)* Bump actions/checkout from 4 to 7 ([#2](https://github.com/shadowmkj/tui-breadcrumb/pull/2)) - ([f7bc71f](https://github.com/shadowmkj/tui-breadcrumb/commit/f7bc71f0989ff5c5dc4f169d44906ad00b1b4672))
 - *(deps)* Bump codecov/codecov-action from 5 to 7 ([#1](https://github.com/shadowmkj/tui-breadcrumb/pull/1)) - ([d6542b8](https://github.com/shadowmkj/tui-breadcrumb/commit/d6542b8fdc2596773c0a98732c7ac347ffd61a56))
 - Rename crate from tui-breadcrumbs to tui-breadcrumb - ([cbc8ef5](https://github.com/shadowmkj/tui-breadcrumb/commit/cbc8ef51210790a5d1da33792ace89d0fe0f80bd))
-- *(release)* Update project configuration and metadata - ([d23a6ee](https://github.com/shadowmkj/tui-breadcrumb/commit/d23a6eeb3b3e47b5fbd4219df6e6d497fb06549f))
+- *(release)* Update project configuration and metadata - ([598334b](https://github.com/shadowmkj/tui-breadcrumb/commit/598334b0eefe109334666759a6bcee35f84b77f9))
 
 ### 👥 New Contributors
 

@@ -167,7 +167,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 ])
                 .split(area);
 
-            // 1. Header
+            // Header
             let header = Paragraph::new(Line::from(vec![
                 Span::styled(
                     " ☁ Cloud Hierarchy ",
@@ -178,7 +178,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             .block(Block::default().borders(Borders::ALL));
             frame.render_widget(header, chunks[0]);
 
-            // 2. Breadcrumb Trail
+            // Breadcrumb Trail
             let items: Vec<BreadcrumbItem> = app
                 .path_nodes
                 .iter()
@@ -211,7 +211,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
             frame.render_stateful_widget(breadcrumbs, chunks[1], &mut app.breadcrumb_state);
 
-            // 3. Resource Overview Pane
+            // Resource Overview Pane
             let mut info_lines = vec![
                 Line::from(vec![
                     Span::styled(
@@ -255,7 +255,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             );
             frame.render_widget(overview, chunks[2]);
 
-            // 4. Footer
+            // Footer
             let footer = Paragraph::new(vec![
                 Line::from(vec![
                     Span::styled(
@@ -276,7 +276,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             .block(Block::default().borders(Borders::ALL));
             frame.render_widget(footer, chunks[3]);
 
-            // 5. Floating Dropdown Popover Modal
+            // Floating Dropdown Popover Modal
             if let Some(drop) = &mut app.active_dropdown {
                 frame.render_widget(Clear, drop.menu_area);
 

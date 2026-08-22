@@ -23,10 +23,10 @@ fn main() -> Result<(), Box<dyn Error>> {
                 .direction(Direction::Vertical)
                 .constraints([
                     Constraint::Length(3), // Header
-                    Constraint::Length(4), // Theme 1: Powerline Pill Theme
-                    Constraint::Length(4), // Theme 2: CI/CD Pipeline Theme
-                    Constraint::Length(4), // Theme 3: Retro Terminal Theme
-                    Constraint::Length(4), // Theme 4: Minimal Dots Theme
+                    Constraint::Length(4), // Powerline Pill Theme
+                    Constraint::Length(4), // CI/CD Pipeline Theme
+                    Constraint::Length(4), // Retro Terminal Theme
+                    Constraint::Length(4), // Minimal Dots Theme
                     Constraint::Min(2),    // Footer
                 ])
                 .split(area);
@@ -43,7 +43,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             frame.render_widget(header, chunks[0]);
 
             // ==============================================================
-            // Theme 1: Powerline Pill Theme
+            // Powerline Pill Theme
             // ==============================================================
             let powerline_items = vec![
                 BreadcrumbItem::new(Line::from(vec![Span::styled(
@@ -78,7 +78,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             frame.render_widget(powerline_widget, chunks[1]);
 
             // ==============================================================
-            // Theme 2: CI / DevOps Pipeline Theme
+            // CI / DevOps Pipeline Theme
             // ==============================================================
             let pipeline_items = vec![
                 BreadcrumbItem::new(Line::from(vec![
@@ -116,7 +116,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             frame.render_widget(pipeline_widget, chunks[2]);
 
             // ==============================================================
-            // Theme 3: Retro Phosphor Terminal Theme
+            // Retro Phosphor Terminal Theme
             // ==============================================================
             let retro_items = vec![
                 BreadcrumbItem::new("SYSTEM"),
@@ -143,7 +143,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             frame.render_widget(retro_widget, chunks[3]);
 
             // ==============================================================
-            // Theme 4: Minimal Dots Theme
+            // Minimal Dots Theme
             // ==============================================================
             let minimal_items = vec![
                 BreadcrumbItem::new("App"),

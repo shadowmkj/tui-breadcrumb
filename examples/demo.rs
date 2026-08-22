@@ -284,7 +284,7 @@ fn ui(frame: &mut Frame, app: &mut App) {
         ])
         .split(area);
 
-    // 1. Header
+    // Header
     let title = Paragraph::new(Line::from(vec![
         Span::styled(
             " 🍞 tui-breadcrumb ",
@@ -295,7 +295,7 @@ fn ui(frame: &mut Frame, app: &mut App) {
     .block(Block::default().borders(Borders::ALL));
     frame.render_widget(title, chunks[0]);
 
-    // 2. Main Interactive Trail Box
+    // Main Interactive Trail Box
     let max_demo_width = app.custom_width.min(chunks[1].width.saturating_sub(4));
     let demo_rect = Rect::new(chunks[1].x + 2, chunks[1].y + 1, max_demo_width, 5);
 
@@ -315,7 +315,7 @@ fn ui(frame: &mut Frame, app: &mut App) {
 
     frame.render_stateful_widget(widget, demo_rect, &mut app.state);
 
-    // 3. Side-by-Side Comparison of Strategies
+    // Side-by-Side Comparison of Strategies
     let comp_block = Block::default()
         .title(" All Truncation Strategies Side-by-Side ")
         .borders(Borders::ALL);
@@ -365,7 +365,7 @@ fn ui(frame: &mut Frame, app: &mut App) {
     r3.y = strat_layouts[3].y;
     frame.render_widget(end_widget, r3);
 
-    // 4. Instructions & Footer
+    // Instructions & Footer
     let help_text = vec![
         Line::from(vec![
             Span::styled(" [←/→/h/l] ", Style::default().bold().fg(Color::Yellow)),
