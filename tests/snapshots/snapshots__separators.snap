@@ -1,0 +1,8 @@
+---
+source: tests/snapshots.rs
+expression: "format!(\"slash: {}\\nchevron: {}\\narrow: {}\\npipe: {}\", slash, chevron, arrow,\npipe)"
+---
+slash: Home / Projects / ratatui
+chevron: Home ❯ Projects ❯ ratatui
+arrow: Home → Projects → ratatui
+pipe: Home | Projects | ratatui

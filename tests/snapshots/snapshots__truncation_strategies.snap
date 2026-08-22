@@ -1,0 +1,8 @@
+---
+source: tests/snapshots.rs
+expression: "format!(\"middle: {}\\nstart: {}\\nshorten: {}\\nend: {}\", middle, start, shorten,\nend)"
+---
+middle: Home ❯ ... ❯ sparkline.rs
+start: ... ❯ src ❯ sparkline.rs
+shorten: H ❯ P ❯ r ❯ src ❯ sparkline.rs
+end: Home ❯ Projects ❯ ...

@@ -1,0 +1,36 @@
+# Rust build artifacts
+/target/
+Cargo.lock
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Temporary files & project local tmp
+tmp/
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# IDE & Editor configurations
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Code coverage & profiling
+*.profraw
+*.profdata
+lcov.info
+cobertura.xml
+
+# Insta snapshot temporary files
+*.snap.new
+
+# Project specific documentation & task trackers
+ai_docs/
+tasks/
