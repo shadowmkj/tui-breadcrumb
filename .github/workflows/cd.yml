@@ -48,7 +48,7 @@ jobs:
           echo "✅ Version verification successful: Cargo.toml ($CARGO_VERSION) matches release tag ($INPUT_TAG)."
 
       - name: Create or Update GitHub Release Entry
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ inputs.version_tag }}
           name: ${{ inputs.version_tag }}
